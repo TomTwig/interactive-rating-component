@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root{
+    --color-primary-orange:hsl(25,97%,53%);
+    --color-neutral-white:hsl(0, 0%, 100%);
+    --color-neutral-lightGrey:hsl(217, 12%, 63%);
+    --color-neutral-mediumGrey:hsl(216, 12%, 54%);
+    --color-neutral-darkBlue:hsl(213, 19%, 18%);
+    --color-neutral-verydarkBlue:hsl(216, 12%, 8%);
+
+    --font-family: 'Overpass', sans-serif;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-neutral-verydarkBlue);
+    color: var(--color-neutral-white);
+
+}
+
+.container{
+    background-color: var(--color-neutral-darkBlue);
+
+    width: 500px;
+    padding: 2em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating__container{}
+
+.rating__container h1{}
+
+.rating__container p{
+    color: var(--color-neutral-lightGrey);
+}
+
+.rating__container ul{
+
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.rating__container li{
+    width: 3em;
+    height:3em;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-neutral-mediumGrey);
+    border-radius: 50%;
+}
+
+
+
+.active{
+    background-color: var(--color-primary-orange) !important;
+}
+
+
+
+
+
+.thanks__container{}
+
+.thanks__container h1{}
+
+.thanks__container{}
+
+.thanks__container p:first-of-type{}
+
+.thanks__container p:last-of-type{}
+
+
+
+
+.button-submit{
+    width: 100%;
+    border-radius: 20px;
+    padding: 1em;
+    color: var(--color-neutral-white);
+    background-color: var(--color-primary-orange);
+}
+
+
+
