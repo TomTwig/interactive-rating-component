@@ -5,20 +5,17 @@ const ratingList = document.getElementById("list_rating");
 
 let ratingValue;
 
-ratingList.addEventListener("click",(element)=>
+ratingList.addEventListener("click",(element) =>
 {
         if(element.target.tagName === "LI"){
 
                 for(let i = 0; i < element.target.parentElement.children.length; i++ ){
                         console.log(element.target.parentElement.children[i].classList.remove("active"));
                 }
-
                 element.target.classList.toggle("active");
                 ratingValue = element.target.innerHTML;
                 console.log(ratingValue); 
         }
-
-
 }
 );
 
