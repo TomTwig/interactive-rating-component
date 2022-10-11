@@ -2,43 +2,46 @@ const thanksState = document.getElementById('state-thanks');
 const ratingState = document.getElementById('state-rating');
 const userRating = document.getElementById('user__rating');
 const ratingList = document.getElementById("list_rating");
+const buttonSubmit = document.getElementById("button-submit");
+const ratingListElement = document.getElementsByClassName("list_rating__element");
 
-let ratingValue;
+let rating = 0;
 
-ratingList.addEventListener("click",(element) =>
-{
-        if(element.target.tagName === "LI"){
+for(let i=0;i<ratingListElement.length;i++){
+        ratingListElement[i].addEventListener("click",(ratingElement)=>{
 
-                for(let i = 0; i < element.target.parentElement.children.length; i++ ){
-                        console.log(element.target.parentElement.children[i].classList.remove("active"));
+
+                if(!ratingElement.target.classList.contains("active")){
+
+                        // deselect other rating elements
+                        for(let a=0;a<ratingListElement.length;a++){
+                                if(ratingListElement[a].classList.contains("active")){
+                                        ratingListElement[a].classList.remove("active");
+                                        
+                                }
+                        }
+
+                        ratingElement.target.classList.add("active");
+                        buttonSubmit.removeAttribute("disabled");
+                        rating = ratingElement.target.innerHTML;
+
+                }else{
+                        ratingElement.target.classList.remove("active"); 
+                        buttonSubmit.setAttribute("disabled","");
                 }
-                element.target.classList.toggle("active");
-                ratingValue = element.target.innerHTML;
-                console.log(ratingValue); 
-        }
-}
-);
+                
 
 
 
-const button = document.getElementById("button");
-thanksState.style.display="none";
-button.addEventListener("click",changeState);
-
-
-
-
-
-
-
-function changeState (){
-        thanksState.style.display = "block";
-        ratingState.style.display = "none";
-        userRating.innerHTML = ratingValue;
+        })
 }
 
+buttonSubmit.addEventListener("click",()=>{
 
 
+
+        
+})
 
 
 

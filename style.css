@@ -119,6 +119,13 @@ body{
     padding: 1em;
     color: var(--color-neutral-white);
     background-color: var(--color-primary-orange);
+    
+}
+
+.button-submit:disabled{
+background-color: var(--color-primary-orange);
+opacity: .5;
+    
 }
 
 
