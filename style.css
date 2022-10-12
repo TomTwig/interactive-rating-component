@@ -100,6 +100,11 @@ body{
 
 }
 
+.rating__container li:hover{
+    cursor: pointer;
+
+}
+
 
 
 .active{
@@ -155,6 +160,11 @@ body{
 .button-submit:active{
     color: var(--color-primary-orange);
     background-color: var(--color-neutral-white);
+}
+
+.button-submit:hover{
+    cursor: pointer;
+   
 }
 
 .button-submit:disabled{
