@@ -38,8 +38,9 @@ for(let i=0;i<ratingListElement.length;i++){
 
 buttonSubmit.addEventListener("click",()=>{
 
-
-
+        ratingState.style.display ="none";
+        userRating.innerHTML = rating;
+        thanksState.style.display = "flex";
         
 })
 
